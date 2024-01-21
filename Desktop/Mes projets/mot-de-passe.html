@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification mot de passe</title>
+    <link rel="stylesheet" href="mot-de-passe.css">
+</head>
+<body>
+    <div class="container">
+        <form action="traitement.php" method="post">
+            <label>Utilisateur</label>
+            <input type="text" required>
+            <label >Mot de passe</label>
+            <input type="password" id="psw" pattern="[a-z0-5]{8,}" title="respecer le format"  required>
+            <input type="submit" value="Envoyer">
+
+        </form>
+    </div>
+    <div id="message">
+        <h3>Le mot de de passe doit contenir les éléments suivants</h3>
+        <p id="leter" class="invalid">Une lettre miniscule</p>
+        <p id="capital" class="invalid">Une lettre majuscule</p>
+        <p id="number" class="invalid">Chiffre</p>
+        <p id="length" class="invalid">8 caractère au minimum </p>
+        
+    </div>
+    <script src="mot-de-passe.js"></script>
+</body>
+</html>
